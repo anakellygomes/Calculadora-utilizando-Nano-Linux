@@ -1,2 +1,37 @@
-# Calculadora-utilizando-Nano-Linux
-Projeto de uma calculadora no qual utilizei o LINUX/ Ubutu/ Nano 7.2. Trata-se de uma calculadora básica no qual utilizei essas ferramentas. Para fazer ela funcionar você faz o download desse código aqui, entra no seu Linox, digita nano calculadora.sh. Pronto! Tenho ela disponível aqui no Google Colab, só ir na pasta Colab e utiliza-la.
+op= ''
+while op != 's' :
+ op = input('''Qual a opção desejada? Escolha dentre as seguintes opções:
+    '+' para soma      '/' para divisão
+    '-' para subtração '*' para multiplicação
+    's' para sair/encerrar o programa
+
+     Operação = ''')
+
+  try:
+   n1= int(input('1 número: '))
+   n2= int(input('2 número: '))
+
+
+  except:
+    print('Entrar com números inteiros!')
+
+  else:
+   if op == '+' :
+    print(f'{n1} + {n2} = {n1 + n2}')
+
+ elif op == '-' :
+   print (f' {n1} - {n2} = {n1 - n2} ')
+
+ elif op == '*' :
+  print (f' {n1} * {n2} = {n1 * n2} ')
+
+ else :
+  try:
+    print(f' {n1} / {n2} =  {n1 / n2} ')
+
+  except :
+   print( 'divisão por zero não permitido!')
+    print('..................\n')
+
+   print(' Programa finalizado!')
+
